@@ -1,0 +1,12 @@
+{
+  "domain": "ftp-client",
+  "name": "FTP Client",
+  "codeowners": ["@cyr-ius"],
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/ftp-client",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "loggers": ["aioftp"],
+  "requirements": ["aioftp==0.21.4"],
+  "version": "1.0.0"
+}

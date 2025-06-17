@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "host": "[%key:common::config_flow::data::host%]",
+          "username": "[%key:common::config_flow::data::username%]",
+          "password": "[%key:common::config_flow::data::password%]",
+          "backup_path": "Backup path",
+          "ssl": "[%key:common::config_flow::data::ssl%]"
+        },
+        "data_description": {
+          "host": "The hostname of the FTP server.",
+          "username": "The username for the FTP server.",
+          "password": "The password for the FTP server.",
+          "backup_path": "Define the path where the backups should be located (will be created automatically if it does not exist).",
+          "ssl": "Enable ssl/tls for FTP Server."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "ssl_error": "[%key:common::config_flow::error::ssl_error%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_service%]"
+    }
+  },
+  "exceptions": {
+    "invalid_username_password": {
+      "message": "Invalid username or password"
+    },
+    "cannot_connect": {
+      "message": "Cannot connect to FTP server"
+    },
+    "ssl_error": {
+      "message": "Cannot connect to FTPS server"
+    },
+    "cannot_access_or_create_backup_path": {
+      "message": "Cannot access or create backup path. Please check the path and permissions."
+    }
+  }
+}
